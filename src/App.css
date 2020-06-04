@@ -1,10 +1,15 @@
+.wrapper {
+  background-color: black;
+  color: white;
+}
+
 .mylist, .relist {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
 }
 .logo {
-  width: 300px;
+  width: 150px;
 }
 
 h2, h3 {
@@ -14,6 +19,11 @@ h2, h3 {
 
 .listitem {
   margin-left: 20px; 
+}
+
+.listImage {
+  width: 200px;
+  height: 150px;
 }
 
 .listitem div button {

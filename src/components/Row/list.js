@@ -9,12 +9,12 @@ class Row extends Component {
    // const recomms = this.props.recomms;
     return (
       <div>
+        <h2>Movie List</h2>
         <div className="mylist">
-          <h2>Movie List</h2>
           {list.map(ele => {
             return (
               <div className="listitem" key={ele.id}>
-                <img src={ele.img} alt="top-pic" />
+                <img className="listImage" src={ele.img} alt="top-pic" />
                 <div className="title">{ele.title}</div>
                 <div className="button">
                   <button
@@ -28,12 +28,12 @@ class Row extends Component {
           })}
         </div>
 
+        <h2>Recommendations</h2>
         <div className="relist">
-          <h2>Recommendations</h2>
           {recomms.map(ele => {
             return (
               <div className="listitem" key={ele.id}>
-                <img src={ele.img} alt="second-pic" />
+                <img className="listImage" src={ele.img} alt="second-pic" />
                 <div className="title">{ele.title}</div>
                 <div className="button">
                   <button
@@ -47,6 +47,18 @@ class Row extends Component {
             );
           })}
         </div>
+
+        <div className="bottom">
+          <h3 className="bottom">My List</h3>
+          <ul>
+            {this.props.list.map(item => (
+            <li key={item.id} className="bottom-item">
+              {item.title}
+            </li>
+            ))}
+          </ul>
+        </div>
+        
       </div>
     );
   }
